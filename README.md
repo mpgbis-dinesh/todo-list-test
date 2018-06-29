@@ -1,5 +1,5 @@
 ## The problem
-Create a simple application using Laravel framework the permit to users handle their tasks.
+Create a simple application using Laravel framework that permit to users handle their tasks.
 
 ## Get up and running
 To run this code you need:
