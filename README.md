@@ -11,12 +11,12 @@ To run this code you need:
 Fork this repo. Code it your way. Think how would you solve this problem using the Laravel's best practices, clean code, and the right patterns design.
 
 1. Make all needed migrations to build the database schemas.
-2. Make a backend to manage the users, task groups, and users.
+2. Make a backend to manage the task, groups, and users.
 3. Make an API to provide to users the following actions.
 	1. List their groups.
 	2. List their tasks by group.
 	3. Change the status of given task.
-4. Make a simple SPA (Simple Page Application) to use the API to permit handle the users' information (group, tasks, change the password)
+4. Make a simple SPA (Single Page Application) to use the API to permit handle the users' information (group, tasks, change the password)
 
 Note that the same source should be shared between backend and API logic
 
