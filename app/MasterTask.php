@@ -25,7 +25,7 @@ class MasterTask extends Model
      *
      * @var array
      */
-    protected $fillable = ['group_managements_id', 'task_managements_id', 'is_active'];
+    protected $fillable = ['group_managements_id', 'task_managements_id', 'is_active', 'users_id', 'completed_on'];
 
     
 }

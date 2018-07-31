@@ -18,7 +18,9 @@ class CreateMasterTasksTable extends Migration
             $table->integer('group_managements_id')->nullable();
             $table->integer('task_managements_id')->nullable();
             $table->boolean('is_active')->nullable()->dafault(0)->comment="0-Inactive, 1-Active";
-            });
+            $table->integer('users_id')->nullable();
+            $table->datetime('completed_on')->nullable();
+        });
     }
 
     /**

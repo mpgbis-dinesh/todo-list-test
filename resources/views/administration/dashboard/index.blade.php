@@ -52,7 +52,6 @@ Home {{ env('SYSTEM_SOFTWARE_NAME') }}
 	            </div>
 			</div>
 		</div>
-	</div>	
-	<hr class="hr-line-dashed">
+	</div>
 </div>
 @endsection
