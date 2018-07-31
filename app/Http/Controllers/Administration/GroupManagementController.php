@@ -60,7 +60,8 @@ class GroupManagementController extends Controller
     public function create()
     {
         $getAllUsers = $this->userController->getAllUsers();
-        return view('administration.group-management.create', compact('getAllUsers'));
+        $getAllMembers = [];
+        return view('administration.group-management.create', compact('getAllUsers', 'getAllMembers'));
     }
 
     /**
@@ -226,11 +227,33 @@ class GroupManagementController extends Controller
 
     public function assignTasksAction(Request $request, $id)
     {
-        return view('administration.group-management.assignTasks', compact('id'));
+        $getAllTasks = DB::table('task_managements')
+                        ->where('is_active', '=', 1)
+                        ->select('id', 'name')
+                        ->orderBy('name', 'ASC')
+                        ->get()
+                        ;
+
+        $getAllAssignedTasks = DB::table('master_tasks')
+                            ->leftJoin('task_managements', 'master_tasks.task_managements_id', '=', 'task_managements.id')
+                            ->where('master_tasks.group_managements_id', '=', $id)
+                            ->select(
+                                'task_managements.id',
+                                'task_managements.name',
+                                'master_tasks.is_active'
+                            )
+                            ->orderBy('task_managements.name', 'ASC')
+                            ->get();
+
+
+        return view('administration.group-management.assignTasks', compact('id', 'getAllTasks', 'getAllAssignedTasks'));
     }
 
     public function manageTaskGroupActions(Request $request)
     {
+        // DELETE OLD TASKS FROM GROUP
+        DB::statement(DB::raw("DELETE FROM master_tasks WHERE group_managements_id=".Input::get('id')));
+
         if(sizeof(Input::get('tasks')) > 0):
             foreach(Input::get('tasks') as $value):
                 $create = New MasterTask;

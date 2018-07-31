@@ -13,7 +13,7 @@ Assign Tasks {{ Config::get('systemsettings.SYSTEM_SOFTWARE_NAME') }}
         <h2>Assign Tasks</h2>        
     </div>    
     <div class="col-lg-2">
-        <a href="{{ url('administration/group-management') }}" class="btn btn-warning btn-sm" title="Edit User"><i class="fa fa-arrow-left"></i> Back</a>
+        <a href="{{ URL::previous() }}" class="btn btn-warning btn-sm" title="Edit User"><i class="fa fa-arrow-left"></i> Back</a>
     </div>        
 </div>
 
@@ -32,11 +32,22 @@ Assign Tasks {{ Config::get('systemsettings.SYSTEM_SOFTWARE_NAME') }}
                         @endif
                         {!! Form::open(['url' => 'administration/manage-tasks-group', 'class' => '', 'files' => true, 'data-parsley-validate' => '']) !!}
                             <div class="row">
-							    <div class="col-md-12">
-							        <label class="control-label">List of Tasks</label>
-							        <select class="form-control ajaxSelect" name="tasks[]" multiple="multiple" required="" data-parsley-error-message="Please select tasks"></select>
-							    </div>
-							</div>
+                                <div class="col-md-12">
+                                    <label class="control-label">List of Tasks of Tasksbers</label>
+                                    <select class="form-control chosen-select" name="tasks[]" multiple="multiple" required="" data-parsley-error-message="Please select tasks">
+                                    @foreach($getAllTasks as $obj)
+                                        @php $flatSet = 0; @endphp
+                                        @foreach($getAllAssignedTasks as $item)
+                                            @if( $obj->id == $item->id)
+                                                @php $flatSet = 1; @endphp
+                                            @endif;
+                                        @endforeach
+                                        <option value="{{ $obj->id }}" {{ ($flatSet == 1)? 'selected=""' : ''}}>{{ $obj->name }}</option>
+                                    @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
 
 							<hr class="hr-line-dashed">
 							<div class="row margin-top20">
@@ -52,55 +63,4 @@ Assign Tasks {{ Config::get('systemsettings.SYSTEM_SOFTWARE_NAME') }}
         </div>
     </div>
 </div>
-@endsection
-
-@section('script')
-<script type="text/javascript">
-$(document).ready(function() {
-    $(".ajaxSelect").select2({
-        ajax: {
-            url: "/search-tasks",
-            dataType: 'json',
-            delay: 250,
-            data: function (params) {
-              return {
-                q: params.term, // search term
-                page: params.page
-              };
-            },
-            processResults: function (data, params) {
-                // parse the results into the format expected by Select2
-                // since we are using custom formatting functions we do not need to
-                // alter the remote JSON data, except to indicate that infinite
-                // scrolling can be used
-                params.page = params.page || 1;
-                return {
-                    results: data.items,
-                    pagination: {
-                        more: (params.page * 30) < data.total_count
-                    }
-                };
-            },
-            cache: true
-        },
-        placeholder: 'Type task name...',
-        escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
-        minimumInputLength: 1,
-        templateResult: formatRepo,
-        templateSelection: formatRepoSelection
-    });
-
-    function formatRepo (repo) {
-        if (repo.loading) {
-            return repo.text;
-        }
-        var markup = "<div class='select2-result-repository clearfix'><div class='select2-result-repository__meta'><div class='select2-result-repository__title'>" + repo.name + "</div>";
-        return markup;
-
-    }
-    function formatRepoSelection (repo) {
-        return repo.name;
-    }
-});
-</script>
 @endsection

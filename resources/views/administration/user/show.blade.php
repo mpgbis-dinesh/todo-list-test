@@ -10,7 +10,7 @@ Manage Users {{ Config::get('systemsettings.SYSTEM_SOFTWARE_NAME') }}
         <h2>Manage Users</h2>        
     </div>
     <div class="col-lg-1">
-        <a href="{{ url('/administration/user/') }}" class="btn btn-warning btn-sm" title="Edit User"><i class="fa fa-arrow-left"></i> Back</a>
+        <a href="{{ URL::previous() }}" class="btn btn-warning btn-sm" title="Edit User"><i class="fa fa-arrow-left"></i> Back</a>
     </div>    
     <div class="col-lg-1">
         <a href="{{ url('/administration/user/' . $user->id . '/edit') }}" class="btn btn-primary btn-sm" title="Edit User"><i class="fa fa-pencil"></i> Edit</a>
@@ -57,7 +57,9 @@ Manage Users {{ Config::get('systemsettings.SYSTEM_SOFTWARE_NAME') }}
                     <div class="col-lg-3">
                         <label class="font-noraml">Type of User : <span class="font-bold">{!! ($user->user_role == 1 ? 'Admin' : 'User') !!}</span></label>
                     </div>
-                </div>                   
+                </div>          
+
+                @if(sizeof($getAllGroups) > 0)         
                 <hr class="hr-line-dashed">
                 <div class="row">
                     <div class="col-md-12">
@@ -71,6 +73,7 @@ Manage Users {{ Config::get('systemsettings.SYSTEM_SOFTWARE_NAME') }}
                         </ul>
                     </div>
                 </div>
+                @endif
             </div>
         </div>
     </div>

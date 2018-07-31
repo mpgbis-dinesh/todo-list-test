@@ -10,7 +10,7 @@ Manage Users {{ Config::get('systemsettings.SYSTEM_SOFTWARE_NAME') }}
         <h2>Manage Users</h2>        
     </div>    
     <div class="col-lg-2">
-        <a href="{{ url('administration/user') }}" class="btn btn-warning btn-sm" title="Edit User"><i class="fa fa-arrow-left"></i> Back</a>
+        <a href="{{ URL::previous() }}" class="btn btn-warning btn-sm" title="Edit User"><i class="fa fa-arrow-left"></i> Back</a>
     </div>        
 </div>
 

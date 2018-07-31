@@ -101,6 +101,7 @@ class UserController extends Controller
 
         $getAllGroups = DB::table('master_groups')
                         ->leftJoin('group_managements', 'master_groups.group_managements_id', 'group_managements.id')
+                        ->where('master_groups.users_id','=', $id)
                         ->select('group_managements.id', 'group_managements.name')
                         ->orderBy('group_managements.name', 'ASC')
                         ->get();

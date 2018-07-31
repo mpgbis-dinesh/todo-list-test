@@ -10,7 +10,7 @@ Manage Groups {{ Config::get('systemsettings.SYSTEM_SOFTWARE_NAME') }}
         <h2>Manage Groups</h2>        
     </div>
     <div class="col-lg-1">
-        <a href="{{ url('/administration/group-management/') }}" class="btn btn-warning btn-sm" title="Go back"><i class="fa fa-arrow-left"></i> Back</a>
+        <a href="{{ URL::previous() }}" class="btn btn-warning btn-sm" title="Go back"><i class="fa fa-arrow-left"></i> Back</a>
     </div>    
     <div class="col-lg-1">
         <a href="{{ url('/administration/group-management/' . $group_management->id . '/edit') }}" class="btn btn-primary btn-sm" title="Edit Group"><i class="fa fa-pencil"></i> Edit</a>
