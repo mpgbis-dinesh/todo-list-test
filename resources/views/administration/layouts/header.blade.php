@@ -9,7 +9,7 @@
                      </span>                    
                 </div>
                 <div class="logo-element">
-                    {!! HTML::image("/assets/img/internachi-small-logo.jpg", "Logo", array( 'class' => 'img-size-small', 'width' => 55 )) !!}
+                    To-Do
                 </div>
             </li>
             <!-- Menu items -->
