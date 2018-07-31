@@ -47,16 +47,6 @@ class Authenticate
                                         ->count()
                                         ;                
             if( $validateWithApplicantRole == '1' ){
-                if( env('APP_DEBUG') == 0 ){
-                    if(!$request->secure()) {
-                        // return $next($request);
-                       return redirect()->secure($request->path());
-                    }    
-                }else{
-                  if ($this->auth->guest()) {
-                        return $next($request);
-                    }  
-                }
                 return $next($request);
             }else{
                 Auth::logout();
