@@ -86,7 +86,7 @@ Manage Groups {{ Config::get('systemsettings.SYSTEM_SOFTWARE_NAME') }}
                                         <i class="fa fa-remove text-danger"></i> {{ $item->name }} 
                                     @else 
                                         <i class="fa fa-check"></i> 
-                                        (Completed by <a class="text-info" href="{{ URL::to('administration/user/'.$item->users_id) }}">{{ $item->completedBy }}</a> on <span class="text-danger">{{ date('F d,Y h:i A', strtotime($item->completed_on)) }}</span>)
+                                        (Completed by <a class="text-info" target="_blank" href="{{ URL::to('administration/user/'.$item->users_id) }}">{{ $item->completedBy }}</a> on <span class="text-danger">{{ date('F d,Y h:i A', strtotime($item->completed_on)) }}</span>)
                                     @endif
                                     
                                 </a>
