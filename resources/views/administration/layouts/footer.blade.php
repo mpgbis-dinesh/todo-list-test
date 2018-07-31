@@ -1,6 +1,6 @@
 <div class="footer">
     <div class="pull-right">
-        Design &amp; development by <a href="https://www.boomtownig.com" title="Boomtown Internet Group" rel="external nofollow" class="external" target="_blank"><img src="{!! asset('/assets/img/boomtown_bw.gif') !!}"></a>
+        
 	</div>
 </div>
 

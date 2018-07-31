@@ -44,5 +44,8 @@ $router->group(['middleware' => 'auth'], function($router)
 $router->group(['middleware' => 'auth'], function($router)
 {
 	$router->resource('dashbaord','Userprofile\DashboardController');
+	$router->get('manage-tasks-status/{group}', 'Userprofile\DashboardController@manageTaskStatusAction');
+	$router->post('update-task-status', 'Userprofile\DashboardController@updateTaskStatusAction');
+	$router->post('change-user-password', 'Userprofile\DashboardController@changePasswordAction');
 });
 
