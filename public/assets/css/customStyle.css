@@ -1,0 +1,87 @@
+ /*!
+* CUSTOM STYLE CSS
+*/
+.margin5{ margin: 5px;}
+.margin10{ margin: 10px;}
+.margin15{ margin: 15px;}
+.margin20{ margin: 20px;}
+
+.margin-top5{ margin-top: 5px;}
+.margin-top10{ margin-top: 10px;}
+.margin-top15{ margin-top: 15px;}
+.margin-top20{ margin-top: 20px;}
+.margin-top30{ margin-top: 30px;}
+.margin-top40{ margin-top: 40px;}
+.margin-top50{ margin-top: 50px;}
+
+.margin-left5{ margin-left: 5px;}
+.margin-left10{ margin-left: 10px;}
+.margin-left15{ margin-left: 15px;}
+.margin-left20{ margin-left: 20px;}
+
+.margin-right5{ margin-right: 5px;}
+.margin-right10{ margin-right: 10px;}
+.margin-right15{ margin-right: 15px;}
+.margin-right20{ margin-right: 20px;}
+
+.margin-bottom5{ margin-bottom: 5px;}
+.margin-bottom10{ margin-bottom: 10px;}
+.margin-bottom15{ margin-bottom: 15px;}
+.margin-bottom20{ margin-bottom: 20px;}
+.margin-bottom30{ margin-bottom: 30px;}
+.margin-bottom40{ margin-bottom: 40px;}
+.margin-bottom50{ margin-bottom: 50px;}
+.margin-bottom60{ margin-bottom: 60px;}
+.margin-bottom70{ margin-bottom: 70px;}
+
+/**PADDING CLASSES**/
+.padding-top0{padding-top: 0px !important;}
+.padding-left0{padding-left: 0px !important;}
+.padding-right0{padding-right: 0px !important;}
+.padding-bottom0{padding-bottom: 0px !important;}
+
+.padding5{ padding: 5px;}
+.padding10{ padding: 10px;}
+.padding15{ padding: 15px;}
+.padding20{ padding: 20px;}
+.padding30{ padding: 30px;}
+.padding40{ padding: 40px;}
+
+.padding-top5{ padding-top: 5px;}
+.padding-top10{ padding-top: 10px;}
+.padding-top15{ padding-top: 15px;}
+.padding-top20{ padding-top: 20px;}
+
+.padding-left0{ padding-left: 0px;}
+.padding-left5{ padding-left: 5px;}
+.padding-left10{ padding-left: 10px;}
+.padding-left15{ padding-left: 15px;}
+.padding-left20{ padding-left: 20px;}
+
+.padding-right5{ padding-right: 5px;}
+.padding-right10{ padding-right: 10px;}
+.padding-right15{ padding-right: 15px;}
+.padding-right20{ padding-right: 20px;}
+.padding-right30{ padding-right: 30px;}
+.padding-right40{ padding-right: 40px;}
+
+.padding-bottom5{ padding-bottom: 5px;}
+.padding-bottom10{ padding-bottom: 10px;}
+.padding-bottom15{ padding-bottom: 15px;}
+.padding-bottom20{ padding-bottom: 20px;}
+.padding-bottom30{ padding-bottom: 30px;}
+
+.padding-top-bottom50{padding: 50px 0 !important;}
+.heading {padding-top: 30px;padding-bottom: 10px;line-height: 1.15em; font-weight: bold;font-size: 245%;border-bottom: 1px solid #ccc; color: #069;}
+.pdf { background-image: url(../img/pdf.gif);}
+.download { display: block;padding: 15px 15px 15px 71px; background-color: #dfdfdf;border: 4px solid #c5c5c5; background-position: 8px 50%; background-repeat: no-repeat; text-decoration: none !important;
+    font-size: 90%; border-radius: 3px;}
+.download span { display: block; font-size: 140%; font-weight: bold;}
+.trouble { margin: 20px 0; color: #004a80; border: 2px solid #cfdfe5; background: #e8f8fe url(../img/download-info.gif) 10px 50% no-repeat;}
+.download-info { font-weight: bold; padding: 20px; padding-left: 70px; border-radius: 3px;}
+.bindcoverage{border: 1px solid #999;}
+.bindcoverageform{padding-top: 20px; padding-right: 20px; padding-bottom: 20px;padding-left: 20px;}
+.having-trouble { color: inherit; background: #e7eaec !important; border: 1px solid #e7eaec;}
+.having-trouble-img { background-image: url(../img/having-trouble.png); margin: 0px !important;}
+.thanku-box {max-width: 800px; z-index: 102; margin: 0 auto; padding-top: 41px;}
+.text-underline{text-decoration: underline;}

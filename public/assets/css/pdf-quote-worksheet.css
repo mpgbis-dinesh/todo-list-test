@@ -1,0 +1,63 @@
+* {
+	margin:0;
+	padding:0;}
+	
+body {
+	padding:20px !important;	/* applies to each page in resulting pdf */
+	font:9pt Helvetica;
+	line-height:1em;}
+	
+h1 {font-size:16pt;}
+
+h3 {
+	padding-top:5px !important;
+	font-size:10pt;}
+	
+table {width:100%;}
+
+.newpage {page-break-before:always;}
+
+.smaller {
+	font-size:8pt;
+	font-style:italic;
+	color:#666;}
+	
+table.grid {
+	padding:3px 0 5px 0;
+	border-collapse:collapse;
+	border:1px solid #dfdfdf;}
+	
+	table.grid td {
+		padding:3px 4px !important;
+		vertical-align:middle;
+		border-bottom:1px solid #dfdfdf;}
+		
+	table.grid tr.alt td {background-color:#f9f9f9;}
+	
+table.rating-breakdown {padding-top:25px !important;}
+
+table.rating-breakdown th {
+	padding-bottom:5px !important;
+	text-align:left;}
+	
+table.rating-breakdown .total {
+	width:105px;
+	padding:1px 3px !important;
+	border:1px solid #000;
+	text-align:right;}
+	
+table.rating-breakdown .sign {
+	width:16px;
+	text-align:center;
+	vertical-align:middle !important;}
+	
+table.rating-breakdown .smaller {
+	padding-top:8px !important;
+	border-top:1px solid #666;
+	font-size:7pt;}
+	
+	table.rating-breakdown .smaller ul {
+		list-style:none;
+		line-height:1.25em;}
+	
+.divide td br {line-height:8px !important;}

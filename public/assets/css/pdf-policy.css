@@ -1,0 +1,213 @@
+
+		* {
+	margin:0;
+	padding:0;}
+	
+body {
+	padding:15px 0 5px 0 !important;	/* applies to each page in resulting pdf */
+	font:9pt Arial, Tahoma, Helvetica, sans-serif;
+	line-height:1em;}
+	
+#container {padding:0 15px 15px 15px;}
+
+#header p {
+	border-top:2px solid #000;
+	border-bottom:2px solid #000;}
+	
+#warnings h1 {border:0;}
+
+#warnings p {
+	font-size:7pt;
+	page-break-inside:avoid;}
+	
+#cover-letter {
+	padding:50px;
+	font:bold 10pt Arial, Tahoma, Helvetica, sans-serif;}
+	
+	#cover-letter p {margin-bottom:20px;}
+	
+	#cover-letter ul,
+	#cover-letter ol {
+		margin-left:50px;
+		margin-bottom:15px;}
+	
+h1 {
+	font-size:12pt;
+	border-top:2px solid #000;
+	text-align:center;}
+	
+h2 {
+	font-size:11pt;
+	text-align:center;}
+	
+h3 {
+	width:375px;
+	border-top:2px solid #000;
+	font-size:10pt;
+	text-align:center;}
+	
+h4 {
+	font-size:10pt;
+	font-weight:normal;
+	text-decoration:underline;}
+	
+table {width:750px;}
+
+table th {
+	width:3%;
+	font-weight:normal;
+	text-align:left;}
+	
+table td {
+	height:24px;
+	vertical-align:bottom;}
+	
+.small {font-size:8pt;}
+
+.answer {border-bottom:1px solid #000;}
+
+.dotted {border-bottom:1px dotted #000;}
+
+.multi-line {line-height:1.5em;}
+
+.symbol em {font-family:ZapfDingbats;}
+
+.yesno {
+	width:7%;
+	text-align:right;}
+	
+.supplement {font:italic 8pt serif;}
+
+table.grid {
+	border-collapse:collapse;
+	border:1px solid #000;}
+	
+	table.grid td,
+	table.grid th {
+		vertical-align:middle;
+		border:1px solid #000;
+		font-size:8pt;}
+		
+	table.grid thead td {
+		font-weight:bold;
+		background-color:#e6e6e6;
+		text-align:center;}
+		
+.center,
+.center td {text-align:center;}
+
+.underline {text-decoration:underline;}
+
+.justify {text-align:justify;}
+
+table.narrow {width:600px;}
+
+.newpage {page-break-before:always;}
+
+table.claims td {height:15px;}
+
+td.freeform {height:20px;}
+
+table.signature td {
+	height:40px;
+	vertical-align:top;}
+	
+table.endorsement {font-size: 10pt;}
+table.endorsement td {height:10pt;line-height:10pt;}
+table.endorsement td p {margin-bottom:15px;}
+
+table.endorsement td ol,
+table.endorsement td ul {
+	margin-left:50px;
+	margin-bottom:15px;}
+
+#signatureimg {padding: 0 100px 0 0;}
+
+table.box {
+	border-collapse:collapse;
+	border-top:1px solid #000;
+	border-right:1px solid #000;
+	border-bottom:1px solid #000;
+	border-left:1px solid #000;
+	font-size: 9pt;}
+	
+	table.box td {
+		padding:2px;
+		vertical-align:top;}
+		
+	table.box td.policychanges {height:150px;}
+		
+	table.box td.numendorsment {height:200px;}
+	
+	table.box td.policychanges p,
+	table.box td.numendorsment p {margin-bottom:15px;}
+	
+table.vtop td {vertical-align:top;}
+
+	table.vtop td ol {
+		padding-left:20px;
+		list-style-type:none;}
+
+table.padded td {padding:10px;}
+
+td.big {
+	font-size:16px;
+	font-weight:bold;
+	line-height:17pt;}
+
+table.box10 {
+	border-collapse:collapse;
+	border-top:1px solid #000;
+	border-right:1px solid #000;
+	border-bottom:1px solid #000;
+	border-left:1px solid #000;
+	font-size: 10pt;}
+	
+.notice {
+	font-size:11pt;
+	line-height: 12pt;}
+
+.heading12 {
+	font-size:12pt;
+	line-height: 13pt;}
+	
+.heading14 {
+	font-size:14pt;
+	line-height:15pt;}
+	
+.heading16 {
+	font-size:16pt;
+	line-height:17pt;}
+
+.heading18{
+	font-size:18pt;
+	line-height: 19pt;}
+
+table.declarations td {vertical-align:top;}
+
+table.endorsement tr.item1 {height:100px;}
+
+table.sections {
+	font-size:10pt;
+	text-align:justify;}
+	
+table.sections td {
+	height:10pt;
+	line-height:11pt;
+	vertical-align:top;}
+	
+table.sections td.nums {width:3%;}
+
+table.impnotice td {height:12pt;}
+
+#signature {
+	margin-top:25px;
+	font:italic 12pt Times New Roman;
+	font-weight:bold;
+	color:#002060;}
+	
+	#signature p {margin-bottom:0;}
+	
+body#renewal p, body#renewal ul, body#renewal table td {
+	margin-bottom:10px;
+	line-height:15px;}

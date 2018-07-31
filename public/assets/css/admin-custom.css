@@ -1,0 +1,152 @@
+/*!
+* ADMIN CUSTOM CSS
+*/
+
+/* HELPER CLASSED */
+/**MARGIN CLASSES**/
+.nomargin-nopadding{margin: 0px !important; padding: 0px !important;}
+
+.margin5{ margin: 5px;}
+.margin10{ margin: 10px;}
+.margin15{ margin: 15px;}
+.margin20{ margin: 20px;}
+
+.margin-top5{ margin-top: 5px;}
+.margin-top10{ margin-top: 10px;}
+.margin-top15{ margin-top: 15px;}
+.margin-top20{ margin-top: 20px;}
+.margin-top30{ margin-top: 30px;}
+.margin-top40{ margin-top: 40px;}
+.margin-top50{ margin-top: 50px;}
+
+.margin-left5{ margin-left: 5px;}
+.margin-left10{ margin-left: 10px;}
+.margin-left15{ margin-left: 15px;}
+.margin-left20{ margin-left: 20px;}
+
+.margin-right5{ margin-right: 5px;}
+.margin-right10{ margin-right: 10px;}
+.margin-right15{ margin-right: 15px;}
+.margin-right20{ margin-right: 20px;}
+
+.margin-bottom0{ margin-bottom: 0px !important;}
+.margin-bottom5{ margin-bottom: 5px;}
+.margin-bottom10{ margin-bottom: 10px;}
+.margin-bottom15{ margin-bottom: 15px;}
+.margin-bottom20{ margin-bottom: 20px;}
+.margin-bottom30{ margin-bottom: 30px;}
+.margin-bottom40{ margin-bottom: 40px;}
+.margin-bottom50{ margin-bottom: 50px;}
+.margin-bottom60{ margin-bottom: 60px;}
+.margin-bottom70{ margin-bottom: 70px;}
+
+/**PADDING CLASSES**/
+.padding-top0{padding-top: 0px !important;}
+.padding-left0{padding-left: 0px !important;}
+.padding-right0{padding-right: 0px !important;}
+.padding-bottom0{padding-bottom: 0px !important;}
+
+.padding5{ padding: 5px !important;}
+.padding10{ padding: 10px !important;}
+.padding15{ padding: 15px !important;}
+.padding20{ padding: 20px !important;}
+.padding30{ padding: 30px !important;}
+.padding40{ padding: 40px !important;}
+
+.padding-top5{ padding-top: 5px !important;}
+.padding-top10{ padding-top: 10px !important;}
+.padding-top15{ padding-top: 15px !important;}
+.padding-top20{ padding-top: 20px !important;}
+.padding-top30{ padding-top: 30px !important;}
+.padding-top40{ padding-top: 40px !important;}
+.padding-top50{ padding-top: 50px !important;}
+.padding-top100{ padding-top: 100px !important;}
+
+.padding-left0{ padding-left: 0px !important;}
+.padding-left5{ padding-left: 5px !important;}
+.padding-left10{ padding-left: 10px !important;}
+.padding-left15{ padding-left: 15px !important;}
+.padding-left20{ padding-left: 20px !important;}
+.padding-left30{ padding-left: 30px !important;}
+.padding-left40{ padding-left: 40px !important;}
+
+.padding-right5{ padding-right: 5px !important;}
+.padding-right10{ padding-right: 10px !important;}
+.padding-right15{ padding-right: 15px !important;}
+.padding-right20{ padding-right: 20px !important;}
+.padding-right30{ padding-right: 30px !important;}
+.padding-right40{ padding-right: 40px !important;}
+
+.padding-bottom5{ padding-bottom: 5px !important;}
+.padding-bottom10{ padding-bottom: 10px !important;}
+.padding-bottom15{ padding-bottom: 15px !important;}
+.padding-bottom20{ padding-bottom: 20px !important;}
+.padding-bottom30{ padding-bottom: 30px !important;}
+
+.padding-top-bottom50{padding: 50px 0 !important;}
+
+.color-white{color: #FFFFFF !important;}
+
+input{font-family: 'Lato' !important;font-weight: 400 !important;}
+input[type="password"]{ font-family: 'Lato';font-weight: 400; background-color: #FFFFFF;    background-image: none;    border: 1px solid #e5e6e7;    border-radius: 1px;    color: inherit;    display: block;    padding: 6px 12px;    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;    width: 100%;    font-size: 14px;}
+table#appList > tbody > tr > td {padding: 8px 0px;}
+table#appList > tbody > tr > td > a {display: block;}
+tr.disabled td{color: #bbb !important;}
+.disabled-input-box{border: 0; background: transparent; border-radius: 4px;}
+.overlayShade{opacity: 0.25;}
+.endorsement-count{position: relative;display: block;width: 38px;height: 38px;background: url(../img/diploma.png) 0 0 no-repeat;font-size: 8px;text-decoration: none;color: #000; background-size: contain;}
+.endorsement-count span{    position: absolute;top: 6px;left: 8px;display: block;width: 12px;text-align: center;font-size: 12px;font-weight: 600;}
+
+.endr-add {background: url(../img/icon/add.png) 0 50% no-repeat;}
+.endr-del { background: url(../img/icon/delete.png) 0 50% no-repeat;}
+.endr-add, .endr-del { padding-left: 22px;}
+
+.endr-rns {background: url(../img/icon/reinstate.png) 0 50% no-repeat;}
+.endr-can {background: url(../img/icon/cancel.png) 0 50% no-repeat;}
+.endr-rns, .endr-can { padding-left: 22px;}
+.text-capitalize {text-transform: uppercase;}
+
+.review-application{font-size: 25px;}
+@media (min-width: 768px) {
+	.optiontextarea { width: 100% !important;}
+}
+.bind-content{
+	padding: 5px;
+}
+.terms-content{
+	padding: 5px 50px 5px 5px;
+	text-align: justify;
+}
+.font15{
+    padding-left: 2px;
+    font-size: 16px;
+}
+
+.bind-request-emailbox{
+	background-color: #3070ED !important; color: #ffffff;
+}
+
+.landing-line{
+	text-align: center;		
+}
+
+.landing-line > img{
+	width: 170px;
+}
+
+.landing-circle{
+	text-align: center;	
+}
+
+.landing-circle > img{
+	width: 80px;
+}
+
+
+.width80{
+	width: 80px;
+}
+.width150{
+	width: 150px;
+}
+

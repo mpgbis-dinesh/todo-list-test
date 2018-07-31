@@ -1,0 +1,96 @@
+body {
+	padding:100px 0px !important 0px 0px;
+	font-size:9pt;
+	font-family:Arial,Verdana,Sans-Serif;
+}
+
+p {
+	margin-top:0;
+}
+
+#container {
+	width:700px;
+}
+
+#container-padding {
+	padding:0 15px 0px 15px;
+}
+
+.header {
+	font-weight:bold;
+}
+
+.alignleft {
+	text-align:left;
+}
+.alignright {
+	text-align:right;
+}
+.aligncenter {
+	text-align:center;
+}
+.alignjustify {
+	text-align:justify;
+}
+
+.decimal {
+	list-style:decimal;
+}
+
+.upper-alpha {
+	list-style:upper-alpha;
+}
+
+ol {
+	list-style:upper-alpha;
+	margin:0;
+}
+
+ol ol {
+	list-style:decimal;
+}
+
+ol ol ol {
+	list-style:lower-alpha;
+}
+
+ol ol ol ol {
+	list-style:decimal;
+}
+
+ol ol ol ol ol {
+	list-style:lower-alpha;
+}
+
+li {
+	margin-bottom:15px;
+}
+
+/* No margin for nested li's, so remember to wrap li content in a p tag */
+ol ol li {
+	margin-bottom:0;
+}
+
+.underline,
+.underlined {
+	text-decoration:underline;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.boxModel{
+    background-color: #fff;
+    width: 640px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 0px;
+}
+
+.sEEL{
+	margin: 0px 0px 0px 0px !important;
+	padding:5px 0px 0px 0px !important;
+	font-size:9pt;
+	font-family:Arial,Verdana,Sans-Serif;
+}
