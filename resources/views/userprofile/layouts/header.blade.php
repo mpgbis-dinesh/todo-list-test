@@ -4,7 +4,7 @@
         <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
             <i class="fa fa-reorder"></i>
         </button>
-        <a href="{{ URL::to('login') }}" class="navbar-brand">To-Do Management</a>
+        <a href="{{ URL::to('dashboard') }}" class="navbar-brand">To-Do Management</a>
     </div>
     <div class="navbar-collapse collapse" id="navbar">
         <ul class="nav navbar-top-links navbar-right">

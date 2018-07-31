@@ -10,7 +10,7 @@ use App;
 use Request;
 use Illuminate\Contracts\Auth\Guard;
 
-class Authenticate
+class AuthenticateUser
 {
     /**
      * The Guard implementation.
@@ -44,7 +44,7 @@ class Authenticate
             $validateWithApplicantRole = DB::table('users')
                                         ->where('users.id', '=', AUTH::id())
                                         ->where('users.is_active', '=', '1')
-                                        ->where('users.user_role', '=', '1')
+                                        ->where('users.user_role', '=', '2')
                                         ->count()
                                         ;                
             if( $validateWithApplicantRole == '1' ){

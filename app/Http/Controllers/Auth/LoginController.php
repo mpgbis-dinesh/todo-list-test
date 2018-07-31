@@ -48,9 +48,9 @@ class LoginController extends Controller
     {
         if(Auth::check()){
             if( Auth::user()->user_role == 1):
-                return Redirect::to('administration/dashbaord');
+                return Redirect::to('administration/dashboard');
             else:
-                return Redirect::to('dashbaord');            
+                return Redirect::to('dashboard');            
             endif;
         }else{
             Auth::logout();
@@ -74,9 +74,9 @@ class LoginController extends Controller
             $updateTokenINDB->save();
 
             if( $updateTokenINDB->user_role == 1):
-                return Redirect::to('administration/dashbaord');            
+                return Redirect::to('administration/dashboard');            
             else:
-                return Redirect::to('dashbaord');            
+                return Redirect::to('dashboard');            
             endif;
         } else {
             Auth::logout();

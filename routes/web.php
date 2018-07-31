@@ -22,7 +22,7 @@ Route::get('logout', 'Auth\LoginController@logout');
 $router->group(['middleware' => 'auth'], function($router)
 {
 	$router->get('home','Administration\DashboardController@homeAction');
-	$router->resource('administration/dashbaord', 'Administration\DashboardController');
+	$router->resource('administration/dashboard', 'Administration\DashboardController');
 	$router->resource('administration/user', 'Administration\UserController');
 	$router->resource('administration/group-management', 'Administration\GroupManagementController');
 	$router->resource('administration/assign-task', 'Administration\TaskManagementController');
@@ -41,9 +41,9 @@ $router->group(['middleware' => 'auth'], function($router)
 });
 
 // USER  ROUTES
-$router->group(['middleware' => 'auth'], function($router)
+$router->group(['middleware' => 'auth-user'], function($router)
 {
-	$router->resource('dashbaord','Userprofile\DashboardController');
+	$router->resource('dashboard','Userprofile\DashboardController');
 	$router->get('manage-tasks-status/{group}', 'Userprofile\DashboardController@manageTaskStatusAction');
 	$router->post('update-task-status', 'Userprofile\DashboardController@updateTaskStatusAction');
 	$router->post('change-user-password', 'Userprofile\DashboardController@changePasswordAction');

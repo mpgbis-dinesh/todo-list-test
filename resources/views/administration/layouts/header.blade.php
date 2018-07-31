@@ -5,7 +5,7 @@
             <li class="nav-header custom-header">
                 <div class="dropdown profile-element text-center">
                     <span>
-                        <a href="{{ URL::to('login') }}">To-Do Management</a>
+                        <a href="{{ URL::to('administration/dashboard') }}">To-Do Management</a>
                      </span>                    
                 </div>
                 <div class="logo-element">
@@ -14,7 +14,7 @@
             </li>
             <!-- Menu items -->
             <li>
-                <a href="{{ URL::to('login') }}"><i class="fa fa-home"></i><span class="nav-label">Home</span> </a>
+                <a href="{{ URL::to('administration/dashboard') }}"><i class="fa fa-home"></i><span class="nav-label">Home</span> </a>
             </li>
 
             <li>
