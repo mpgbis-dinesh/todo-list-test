@@ -29,7 +29,17 @@
 <div class="row">
     <div class="col-md-12">
         <label class="control-label">Members</label>
-        <select class="form-control js-example-basic-multiple" name="users[]" multiple="multiple"></select>
+        <select class="form-control chosen-select" name="users[]" multiple="multiple" required="" data-parsley-error-message="Please select users">
+        @foreach($getAllUsers as $obj)
+            @php $flatSet = 0; @endphp
+            @foreach($getAllMembers as $item)
+                @if( $obj->id == $item->id)
+                    @php $flatSet = 1; @endphp
+                @endif;
+            @endforeach
+            <option value="{{ $obj->id }}" {{ ($flatSet == 1)? 'selected=""' : ''}}>{{ $obj->userName}}</option>
+        @endforeach
+        </select>
     </div>
 </div>
 

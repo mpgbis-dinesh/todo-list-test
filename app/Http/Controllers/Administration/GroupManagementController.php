@@ -20,9 +20,16 @@ use Auth;
 use Mail;
 use App\MasterGroup;
 use App\MasterTask;
+use App\Http\Controllers\Administration\UserController;
+
 
 class GroupManagementController extends Controller
 {
+    protected $userController;
+    public function __construct(UserController $userController)
+    {
+        $this->userController = $userController;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -52,7 +59,8 @@ class GroupManagementController extends Controller
      */
     public function create()
     {
-        return view('administration.group-management.create');
+        $getAllUsers = $this->userController->getAllUsers();
+        return view('administration.group-management.create', compact('getAllUsers'));
     }
 
     /**
@@ -129,8 +137,19 @@ class GroupManagementController extends Controller
     public function edit($id)
     {
         $group_management = GroupManagement::findOrFail($id);
+        $getAllUsers = $this->userController->getAllUsers();
 
-        return view('administration.group-management.edit', compact('group_management'));
+        $getAllMembers = DB::table('master_groups')
+                            ->leftJoin('users', 'master_groups.users_id', '=', 'users.id')
+                            ->where('group_managements_id', '=', $group_management->id)
+                            ->select(
+                                'users.id',
+                                DB::raw("CONCAT(users.first_name, ' ', users.last_name) AS member")
+                            )
+                            ->orderBy('users.first_name', 'ASC')
+                            ->get();
+
+        return view('administration.group-management.edit', compact('group_management', 'getAllUsers', 'getAllMembers'));
     }
 
     /**
@@ -148,6 +167,19 @@ class GroupManagementController extends Controller
         
         $group_management = GroupManagement::findOrFail($id);
         $group_management->update($requestData);
+
+        // DELETE OLD MEMBERS FROM GROUP
+        DB::statement(DB::raw("DELETE FROM master_groups WHERE group_managements_id=".$id));
+
+        //ADD MEMBERS TO GROUP
+        if(sizeof(Input::get('users')) > 0):
+            foreach(Input::get('users') as $item):
+                $addToGroup                         = New MasterGroup;
+                $addToGroup->users_id               = $item;
+                $addToGroup->group_managements_id   = $id;
+                $addToGroup->save();
+            endforeach;
+        endif;
 
         return redirect('administration/group-management')
                     ->with('flash_message', 'Group updated successfully!')

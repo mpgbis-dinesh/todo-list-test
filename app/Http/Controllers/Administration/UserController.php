@@ -189,4 +189,18 @@ class UserController extends Controller
         $dataArray['items'] = $getUsersObj;
         return Response::json($dataArray);
     }
+
+    public function getAllUsers()
+    {
+        $getAllUsers = DB::table('users')
+                        ->where('users.is_active', '=', 1)
+                        ->where('users.user_role', '=', 2)
+                        ->select(
+                            'users.id',
+                            DB::raw("CONCAT(users.first_name, ' ', users.last_name) AS userName")
+                        )
+                        ->orderBy('users.first_name', 'ASC')
+                        ->get();
+        return $getAllUsers;
+    }
 }

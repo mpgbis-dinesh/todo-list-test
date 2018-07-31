@@ -9,6 +9,7 @@
 <!-- JS VALIDATION -->
 {!! Html::style('/assets/js/plugins/parsley/parsley.css') !!}
 {!! Html::style('/assets/js/plugins/jquery-ui/jquery-ui.css') !!}
+{!! Html::style('/assets/css/plugins/chosen/chosen.css') !!}
 
 <style type="text/css">
 #topcontrol:hover{background: #4dc4c0;}
