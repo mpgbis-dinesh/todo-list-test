@@ -71,9 +71,11 @@ class DashboardController extends Controller
 
     public function updateTaskStatusAction(Request $request)
     {
-        $updateTask = MasterTask::findOrFail(Input::get('currentId'));
-        $updateTask->is_active = Input::get('status');
-        $updateTask->save();
+        $updateTask                 = MasterTask::findOrFail(Input::get('currentId'));
+        $updateTask->is_active      = Input::get('status');
+        $updateTask->users_id       = Auth::id();
+        $updateTask->completed_on   = date('Y-m-d H:i:s');
+        $updateTask->save(); 
         return response()->json([
                         'code' => 200,
                         'response' => 'success',

@@ -115,11 +115,15 @@ class GroupManagementController extends Controller
 
         $getAllTasks = DB::table('master_tasks')
                             ->leftJoin('task_managements', 'master_tasks.task_managements_id', '=', 'task_managements.id')
+                            ->leftJoin('users', 'master_tasks.users_id', '=', 'users.id')
                             ->where('master_tasks.group_managements_id', '=', $group_management->id)
                             ->select(
                                 'task_managements.id',
                                 'task_managements.name',
-                                'master_tasks.is_active'
+                                'master_tasks.is_active',
+                                'master_tasks.users_id',
+                                DB::raw("CONCAT(users.first_name,' ',users.last_name) AS completedBy"),
+                                'master_tasks.completed_on'
                             )
                             ->orderBy('task_managements.name', 'ASC')
                             ->get();

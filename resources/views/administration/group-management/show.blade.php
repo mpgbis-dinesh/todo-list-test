@@ -37,20 +37,20 @@ Manage Groups {{ Config::get('systemsettings.SYSTEM_SOFTWARE_NAME') }}
             <div class="ibox-content">
                 <div class="row">
                     <div class="col-lg-3">
-                        <label>ID : {{ $group_management->id }}</label>
+                        <label class="font-noraml">ID : <span class="font-bold">{{ $group_management->id }}</span></label>
                     </div>
                     <div class="col-lg-3">
-                        <label>Group Name : {{ $group_management->name }}</label>
+                        <label class="font-noraml">Group Name : <span class="font-bold">{{ $group_management->name }}</span></label>
                     </div>
                     <div class="col-lg-3">
-                        <label>Group Status : {!! ($group_management->is_active == 1 ? 'Active' : 'Inactive') !!}</label>
+                        <label class="font-noraml">Group Status : <span class="font-bold">{!! ($group_management->is_active == 1 ? 'Active' : 'Inactive') !!}</span></label>
                     </div>
                 </div>
                 <hr class="hr-line-dashed">
                 <div class="row">
                     <div class="col-lg-12">
-                        <label>Group Description</label>
-                        <p>{{ !empty($group_management->description) ? $group_management->description : '--' }}</p>
+                        <label class="font-noraml">Group Description</label>
+                        <p class="font-bold">{{ !empty($group_management->description) ? $group_management->description : '--' }}</p>
                     </div>
                 </div>
                 <hr class="hr-line-dashed">
@@ -81,7 +81,15 @@ Manage Groups {{ Config::get('systemsettings.SYSTEM_SOFTWARE_NAME') }}
                     <ul class="list-unstyled">
                         @foreach($getAllTasks as $item)
                             <li class="margin-bottom5">
-                                <a href="{{ URL::to('administration/task-management/'.$item->id) }}" target="_blank" title="View {{ $item->name }} information">{{ $item->name }} @if( $item->is_active == 0) <i class="fa fa-remove text-danger"></i> @else <i class="fa fa-check"></i> @endif</a>
+                                <a href="{{ URL::to('administration/task-management/'.$item->id) }}" target="_blank" title="View {{ $item->name }} information">
+                                    @if( $item->is_active == 0) 
+                                        <i class="fa fa-remove text-danger"></i> {{ $item->name }} 
+                                    @else 
+                                        <i class="fa fa-check"></i> 
+                                        (Completed by <a class="text-info" href="{{ URL::to('administration/user/'.$item->users_id) }}">{{ $item->completedBy }}</a> on <span class="text-danger">{{ date('F d,Y h:i A', strtotime($item->completed_on)) }}</span>)
+                                    @endif
+                                    
+                                </a>
                             </li>
                         @endforeach
                     </ul>
